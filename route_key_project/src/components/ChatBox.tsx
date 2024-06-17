@@ -35,7 +35,7 @@ export const ChatBox: React.FC<ChatBoxProps> = ({ apiKey }) => {
 		const data = await response.json();
 		const aiMessage = {
 			role: "assistant",
-			content: data.choices[0].message.content,
+			content: data?.choices[0]?.message.content,
 		};
 		setMessages((prevMessages) => [...prevMessages, aiMessage]);
 	};

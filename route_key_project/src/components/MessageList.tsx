@@ -10,7 +10,6 @@ export const MessageList: React.FC<MessageListProps> = ({messages}) => {
         <Box>
             {messages.map((message, index) => (
                 <Box key={index} mb={2}>
-                    <div className="bg-red-100 text-blue">123</div>
                         <Typography variant="body1" fontWeight="bold">
                             {message.role === "user" ? "You" : "ChatGPT"}
                         </Typography>
@@ -20,7 +19,6 @@ export const MessageList: React.FC<MessageListProps> = ({messages}) => {
                         >
                             {message.content}
                         </Typography>
-
                 </Box>
             ))}
         </Box>
